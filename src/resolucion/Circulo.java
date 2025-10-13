@@ -86,6 +86,14 @@ public class Circulo {
 		//System.out.println(seTocan(c3, c2));
 		//System.out.println(c3.estaDentro(c2));
 		dibujarCirculos(dib , 400, 400, 200);
-		dibujarCirculosEjeY(dib , 400, 400, 200);
+		//dibujarCirculosEjeY(dib , 400, 400, 200);
+		Imagen img = new Imagen("lena.bmp");
+		//img.aumentarBrillo(100);
+		//img.enrojecer(100);
+		//img.aGrises();
+		//img.invertir();
+		//img.espejar();
+		img.girarDerecha();
+		Dibujador.dibujar(img);
 	}
 }
