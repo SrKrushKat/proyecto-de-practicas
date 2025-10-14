@@ -34,4 +34,34 @@ public class Agenda {
     	contactos[i] = contacto;
     	telefonos[i] = telefono;
     }
+    
+    void eliminar(Persona contacto) {
+    	for (int i = 0; i < contactos.length; i++) {
+    		if (contactos[i].mismaPersona(contacto)) {
+    			contactos[i] = null;
+    			telefonos[i] = null;
+    		}
+    	}
+    }
+    
+    boolean pertenece(Persona contacto) {
+    	for (int i = 0; i < contactos.length; i++) {
+    		if (contactos[i].mismaPersona(contacto)) {
+    			return true;
+    		}
+    	}
+    	return false;
+    }
+    
+    String dameTelefono(Persona contacto) {
+    	if (pertenece(contacto) == true){
+    		for (int i = 0; i < contactos.length; i++) {
+    			if (contactos[i].mismaPersona(contacto)) {
+    				return telefonos[i];
+    			}
+    		}
+    	}
+    	return "Contacto no encontrado";
+    }
+    
 }
