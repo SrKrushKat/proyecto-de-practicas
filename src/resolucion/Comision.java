@@ -15,5 +15,5 @@ public class Comision {
 		this.inscriptos = inscriptos;
 		this.calificaciones = calificaciones;
 	}
-
+	
 }
